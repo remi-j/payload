@@ -9,233 +9,81 @@
   h4,
   h5,
   h6 {
-    font-size: unset !important;
-    font-weight: unset !important;
+    font-size: unset;
+    font-weight: unset;
   }
   
   :root {
-    /* Core brand colors */
+    /* Core brand colors - only override the custom properties */
     --background: 250 248 246 !important; /* #faf8f6 */
     --foreground: 19 10 6 !important; /* #130a06 */
-    
-    /* Card and surface colors */
-    --card: 245 240 235 !important; /* Light brown-gray card background */
-    --card-foreground: 19 10 6 !important; /* #130a06 */
-    
-    /* Popover colors */
-    --popover: 250 248 246 !important; /* Same as background */
-    --popover-foreground: 19 10 6 !important; /* #130a06 */
-    
-    /* Primary colors (using your dark brand color) */
+    --card: 245 240 235 !important;
+    --card-foreground: 19 10 6 !important;
+    --popover: 250 248 246 !important;
+    --popover-foreground: 19 10 6 !important;
     --primary: 19 10 6 !important; /* #130a06 */
     --primary-foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Secondary colors */
-    --secondary: 240 230 220 !important; /* Light brown-gray */
-    --secondary-foreground: 19 10 6 !important; /* #130a06 */
-    
-    /* Muted colors for subtle text and backgrounds */
-    --muted: 235 225 210 !important; /* Medium light brown-gray */
-    --muted-foreground: 80 65 55 !important; /* Medium brown-gray text */
-    
-    /* Accent colors (your pink brand color) */
-    --accent: 253 63 146 !important; /* #fd3f92 */
+    --secondary: 240 230 220 !important;
+    --secondary-foreground: 19 10 6 !important;
+    --muted: 235 225 210 !important;
+    --muted-foreground: 80 65 55 !important;
+    --accent: 253 63 146 !important; /* #fd3f92 - This is the key one! */
     --accent-foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Destructive/error colors */
-    --destructive: 220 60 80 !important; /* Red that harmonizes with pink */
-    --destructive-foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Border and input colors */
-    --border: 220 210 195 !important; /* Subtle brown-gray border */
-    --input: 240 235 225 !important; /* Light brown-gray input background */
+    --destructive: 220 60 80 !important;
+    --destructive-foreground: 250 248 246 !important;
+    --border: 220 210 195 !important;
+    --input: 240 235 225 !important;
     --ring: 253 63 146 !important; /* Pink focus ring */
-    
-    /* Border radius */
-    --radius: 0.2rem !important;
-    
-    /* Semantic colors */
-    --success: 60 140 80 !important; /* Forest green */
-    --warning: 230 140 60 !important; /* Warm orange */
-    --error: 220 60 80 !important; /* Red matching destructive */
-    
-    /* Override Tailwind prose colors */
-    --tw-prose-body: hsl(19 10 6) !important;
-    --tw-prose-headings: hsl(19 10 6) !important;
-    --tw-prose-lead: hsl(80 65 55) !important;
-    --tw-prose-links: hsl(253 63 146) !important; /* Your pink for links */
-    --tw-prose-bold: hsl(19 10 6) !important;
-    --tw-prose-counters: hsl(80 65 55) !important;
-    --tw-prose-bullets: hsl(220 210 195) !important;
-    --tw-prose-hr: hsl(220 210 195) !important;
-    --tw-prose-quotes: hsl(19 10 6) !important;
-    --tw-prose-quote-borders: hsl(253 63 146) !important; /* Pink quote borders */
-    --tw-prose-captions: hsl(80 65 55) !important;
-    --tw-prose-kbd: hsl(19 10 6) !important;
-    --tw-prose-kbd-shadows: 19 10 6 !important;
-    --tw-prose-code: hsl(253 63 146) !important; /* Pink code */
-    --tw-prose-pre-code: hsl(250 248 246) !important;
-    --tw-prose-pre-bg: hsl(19 10 6) !important;
-    --tw-prose-th-borders: hsl(220 210 195) !important;
-    --tw-prose-td-borders: hsl(220 210 195) !important;
+    --radius: 0.2rem;
+    --success: 60 140 80 !important;
+    --warning: 230 140 60 !important;
+    --error: 220 60 80 !important;
   }
   
   [data-theme='dark'] {
-    /* Core brand colors inverted */
     --background: 19 10 6 !important; /* #130a06 */
     --foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Card and surface colors */
-    --card: 30 20 15 !important; /* Slightly lighter than background */
-    --card-foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Popover colors */
-    --popover: 25 15 10 !important; /* Slightly different from background */
-    --popover-foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Primary colors (using your light brand color) */
+    --card: 30 20 15 !important;
+    --card-foreground: 250 248 246 !important;
+    --popover: 25 15 10 !important;
+    --popover-foreground: 250 248 246 !important;
     --primary: 250 248 246 !important; /* #faf8f6 */
     --primary-foreground: 19 10 6 !important; /* #130a06 */
-    
-    /* Secondary colors */
-    --secondary: 45 35 25 !important; /* Medium dark brown */
-    --secondary-foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Muted colors */
-    --muted: 60 45 35 !important; /* Medium brown */
-    --muted-foreground: 180 160 145 !important; /* Light brown-gray text */
-    
-    /* Accent colors (slightly muted pink for dark theme) */
-    --accent: 240 55 130 !important; /* Slightly darker pink */
-    --accent-foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Destructive/error colors */
-    --destructive: 180 45 65 !important; /* Darker red for dark theme */
-    --destructive-foreground: 250 248 246 !important; /* #faf8f6 */
-    
-    /* Border and input colors */
-    --border: 50 40 30 !important; /* Dark brown border */
-    --input: 40 30 20 !important; /* Dark brown input background */
-    --ring: 240 55 130 !important; /* Pink focus ring */
-    
-    /* Semantic colors for dark theme */
-    --success: 40 100 50 !important; /* Darker green */
-    --warning: 200 100 40 !important; /* Darker orange */
-    --error: 180 45 65 !important; /* Darker red */
-    
-    /* Override Tailwind prose colors for dark theme */
-    --tw-prose-body: hsl(250 248 246) !important;
-    --tw-prose-headings: hsl(250 248 246) !important;
-    --tw-prose-lead: hsl(180 160 145) !important;
-    --tw-prose-links: hsl(240 55 130) !important; /* Pink links in dark mode */
-    --tw-prose-bold: hsl(250 248 246) !important;
-    --tw-prose-counters: hsl(180 160 145) !important;
-    --tw-prose-bullets: hsl(50 40 30) !important;
-    --tw-prose-hr: hsl(50 40 30) !important;
-    --tw-prose-quotes: hsl(250 248 246) !important;
-    --tw-prose-quote-borders: hsl(240 55 130) !important; /* Pink quote borders */
-    --tw-prose-captions: hsl(180 160 145) !important;
-    --tw-prose-kbd: hsl(250 248 246) !important;
-    --tw-prose-kbd-shadows: 250 248 246 !important;
-    --tw-prose-code: hsl(240 55 130) !important; /* Pink code in dark mode */
-    --tw-prose-pre-code: hsl(180 160 145) !important;
-    --tw-prose-pre-bg: hsl(30 20 15) !important;
-    --tw-prose-th-borders: hsl(50 40 30) !important;
-    --tw-prose-td-borders: hsl(50 40 30) !important;
+    --secondary: 45 35 25 !important;
+    --secondary-foreground: 250 248 246 !important;
+    --muted: 60 45 35 !important;
+    --muted-foreground: 180 160 145 !important;
+    --accent: 240 55 130 !important; /* Slightly darker pink for dark theme */
+    --accent-foreground: 250 248 246 !important;
+    --destructive: 180 45 65 !important;
+    --destructive-foreground: 250 248 246 !important;
+    --border: 50 40 30 !important;
+    --input: 40 30 20 !important;
+    --ring: 240 55 130 !important;
+    --success: 40 100 50 !important;
+    --warning: 200 100 40 !important;
+    --error: 180 45 65 !important;
   }
 }
 
 @layer base {
   * {
-    border-color: hsl(var(--border)) !important;
+    @apply border-border;
   }
   
   body {
-    background-color: hsl(var(--background)) !important;
-    color: hsl(var(--foreground)) !important;
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   }
   
   /* Font fallback stack for better cross-platform support */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   }
   
   /* Ensure all text elements use Optima */
   p, span, div, a, button, input, textarea, select {
-    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
-  }
-  
-  /* Force brand colors on links and interactive elements */
-  a {
-    color: hsl(var(--accent)) !important;
-    text-decoration: underline !important;
-  }
-  
-  a:hover {
-    color: hsl(var(--accent-foreground)) !important;
-    background-color: hsl(var(--accent)) !important;
-  }
-  
-  /* Style buttons to use brand colors */
-  button {
-    background-color: hsl(var(--primary)) !important;
-    color: hsl(var(--primary-foreground)) !important;
-    border: 1px solid hsl(var(--border)) !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: var(--radius) !important;
-    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
-  }
-  
-  button:hover {
-    background-color: hsl(var(--accent)) !important;
-    color: hsl(var(--accent-foreground)) !important;
-    border-color: hsl(var(--accent)) !important;
-  }
-  
-  /* Style form inputs */
-  input, textarea, select {
-    background-color: hsl(var(--input)) !important;
-    color: hsl(var(--foreground)) !important;
-    border: 1px solid hsl(var(--border)) !important;
-    border-radius: var(--radius) !important;
-    padding: 0.5rem !important;
-  }
-  
-  input:focus, textarea:focus, select:focus {
-    outline: none !important;
-    border-color: hsl(var(--accent)) !important;
-    box-shadow: 0 0 0 2px hsl(var(--ring)) !important;
-  }
-  
-  /* Force accent color on specific elements that might use it */
-  .border-accent,
-  [class*="border-accent"] {
-    border-color: hsl(var(--accent)) !important;
-  }
-  
-  .bg-accent,
-  [class*="bg-accent"] {
-    background-color: hsl(var(--accent)) !important;
-  }
-  
-  .text-accent,
-  [class*="text-accent"] {
-    color: hsl(var(--accent)) !important;
-  }
-  
-  /* Override any remaining default link colors */
-  .prose a,
-  .prose a:visited {
-    color: hsl(var(--accent)) !important;
-  }
-  
-  .prose a:hover {
-    color: hsl(var(--accent-foreground)) !important;
-    background-color: hsl(var(--accent)) !important;
+    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   }
 }
 

@@ -11,207 +11,126 @@
   h6 {
     font-size: unset;
     font-weight: unset;
-    font-family: 'Optima', 'Segoe UI', 'Helvetica Neue', sans-serif;
-  }
-  
-  body {
-    font-family: 'Optima', 'Segoe UI', 'Helvetica Neue', sans-serif;
   }
   
   :root {
-    /* Fixed color definitions using hex values for Android compatibility */
-    --background: #faf8f6;
-    --foreground: #130a06;
-    --card: #faf8f6;
-    --card-foreground: #130a06;
-    --popover: #faf8f6;
-    --popover-foreground: #130a06;
-    --primary: #fd3f92;
-    --primary-foreground: #faf8f6;
-    --secondary: #f5f3f0;
-    --secondary-foreground: #130a06;
-    --muted: #f0ede8;
-    --muted-foreground: #6b6561;
-    --accent: #fd3f92;
-    --accent-foreground: #faf8f6;
-    --destructive: #ef4444;
-    --destructive-foreground: #faf8f6;
-    --border: #e5e0db;
-    --input: #f5f3f0;
-    --ring: #fd3f92;
-    --radius: 0.5rem;
-    --success: #22c55e;
-    --warning: #f59e0b;
-    --error: #ef4444;
+    /* Core brand colors */
+    --background: 250 248 246; /* #faf8f6 */
+    --foreground: 19 10 6; /* #130a06 */
     
-    /* Alternative RGB format for Tailwind compatibility */
-    --background-rgb: 250, 248, 246;
-    --foreground-rgb: 19, 10, 6;
-    --card-rgb: 250, 248, 246;
-    --card-foreground-rgb: 19, 10, 6;
-    --popover-rgb: 250, 248, 246;
-    --popover-foreground-rgb: 19, 10, 6;
-    --primary-rgb: 253, 63, 146;
-    --primary-foreground-rgb: 250, 248, 246;
-    --secondary-rgb: 245, 243, 240;
-    --secondary-foreground-rgb: 19, 10, 6;
-    --muted-rgb: 240, 237, 232;
-    --muted-foreground-rgb: 107, 101, 97;
-    --accent-rgb: 253, 63, 146;
-    --accent-foreground-rgb: 250, 248, 246;
-    --destructive-rgb: 239, 68, 68;
-    --destructive-foreground-rgb: 250, 248, 246;
-    --border-rgb: 229, 224, 219;
-    --input-rgb: 245, 243, 240;
-    --ring-rgb: 253, 63, 146;
-    --success-rgb: 34, 197, 94;
-    --warning-rgb: 245, 158, 11;
-    --error-rgb: 239, 68, 68;
+    /* Card and surface colors */
+    --card: 245 240 235; /* Light brown-gray card background */
+    --card-foreground: 19 10 6; /* #130a06 */
+    
+    /* Popover colors */
+    --popover: 250 248 246; /* Same as background */
+    --popover-foreground: 19 10 6; /* #130a06 */
+    
+    /* Primary colors (using your dark brand color) */
+    --primary: 19 10 6; /* #130a06 */
+    --primary-foreground: 250 248 246; /* #faf8f6 */
+    
+    /* Secondary colors */
+    --secondary: 240 230 220; /* Light brown-gray */
+    --secondary-foreground: 19 10 6; /* #130a06 */
+    
+    /* Muted colors for subtle text and backgrounds */
+    --muted: 235 225 210; /* Medium light brown-gray */
+    --muted-foreground: 80 65 55; /* Medium brown-gray text */
+    
+    /* Accent colors (your pink brand color) */
+    --accent: 253 63 146; /* #fd3f92 */
+    --accent-foreground: 250 248 246; /* #faf8f6 */
+    
+    /* Destructive/error colors */
+    --destructive: 220 60 80; /* Red that harmonizes with pink */
+    --destructive-foreground: 250 248 246; /* #faf8f6 */
+    
+    /* Border and input colors */
+    --border: 220 210 195; /* Subtle brown-gray border */
+    --input: 240 235 225; /* Light brown-gray input background */
+    --ring: 253 63 146; /* Pink focus ring */
+    
+    /* Border radius */
+    --radius: 0.2rem;
+    
+    /* Semantic colors */
+    --success: 60 140 80; /* Forest green */
+    --warning: 230 140 60; /* Warm orange */
+    --error: 220 60 80; /* Red matching destructive */
   }
   
   [data-theme='dark'] {
-    /* Dark mode with proper warm colors */
-    --background: #130a06;
-    --foreground: #faf8f6;
-    --card: #1f1410;
-    --card-foreground: #faf8f6;
-    --popover: #130a06;
-    --popover-foreground: #faf8f6;
-    --primary: #fd3f92;
-    --primary-foreground: #130a06;
-    --secondary: #2a1f1b;
-    --secondary-foreground: #faf8f6;
-    --muted: #342b27;
-    --muted-foreground: #a8a29e;
-    --accent: #fd3f92;
-    --accent-foreground: #130a06;
-    --destructive: #dc2626;
-    --destructive-foreground: #faf8f6;
-    --border: #3c322e;
-    --input: #2a1f1b;
-    --ring: #fd3f92;
-    --success: #16a34a;
-    --warning: #d97706;
-    --error: #dc2626;
+    /* Core brand colors inverted */
+    --background: 19 10 6; /* #130a06 */
+    --foreground: 250 248 246; /* #faf8f6 */
     
-    /* Alternative RGB format for dark mode */
-    --background-rgb: 19, 10, 6;
-    --foreground-rgb: 250, 248, 246;
-    --card-rgb: 31, 20, 16;
-    --card-foreground-rgb: 250, 248, 246;
-    --popover-rgb: 19, 10, 6;
-    --popover-foreground-rgb: 250, 248, 246;
-    --primary-rgb: 253, 63, 146;
-    --primary-foreground-rgb: 19, 10, 6;
-    --secondary-rgb: 42, 31, 27;
-    --secondary-foreground-rgb: 250, 248, 246;
-    --muted-rgb: 52, 43, 39;
-    --muted-foreground-rgb: 168, 162, 158;
-    --accent-rgb: 253, 63, 146;
-    --accent-foreground-rgb: 19, 10, 6;
-    --destructive-rgb: 220, 38, 38;
-    --destructive-foreground-rgb: 250, 248, 246;
-    --border-rgb: 60, 50, 46;
-    --input-rgb: 42, 31, 27;
-    --ring-rgb: 253, 63, 146;
-    --success-rgb: 22, 163, 74;
-    --warning-rgb: 217, 119, 6;
-    --error-rgb: 220, 38, 38;
+    /* Card and surface colors */
+    --card: 30 20 15; /* Slightly lighter than background */
+    --card-foreground: 250 248 246; /* #faf8f6 */
+    
+    /* Popover colors */
+    --popover: 25 15 10; /* Slightly different from background */
+    --popover-foreground: 250 248 246; /* #faf8f6 */
+    
+    /* Primary colors (using your light brand color) */
+    --primary: 250 248 246; /* #faf8f6 */
+    --primary-foreground: 19 10 6; /* #130a06 */
+    
+    /* Secondary colors */
+    --secondary: 45 35 25; /* Medium dark brown */
+    --secondary-foreground: 250 248 246; /* #faf8f6 */
+    
+    /* Muted colors */
+    --muted: 60 45 35; /* Medium brown */
+    --muted-foreground: 180 160 145; /* Light brown-gray text */
+    
+    /* Accent colors (slightly muted pink for dark theme) */
+    --accent: 240 55 130; /* Slightly darker pink */
+    --accent-foreground: 250 248 246; /* #faf8f6 */
+    
+    /* Destructive/error colors */
+    --destructive: 180 45 65; /* Darker red for dark theme */
+    --destructive-foreground: 250 248 246; /* #faf8f6 */
+    
+    /* Border and input colors */
+    --border: 50 40 30; /* Dark brown border */
+    --input: 40 30 20; /* Dark brown input background */
+    --ring: 240 55 130; /* Pink focus ring */
+    
+    /* Semantic colors for dark theme */
+    --success: 40 100 50; /* Darker green */
+    --warning: 200 100 40; /* Darker orange */
+    --error: 180 45 65; /* Darker red */
   }
 }
 
 @layer base {
   * {
-    border-color: var(--border);
+    @apply border-border;
   }
   
   body {
-    background-color: var(--background);
-    color: var(--foreground);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   }
   
-  /* Ensure proper color application */
-  .bg-background {
-    background-color: var(--background) !important;
+  /* Font fallback stack for better cross-platform support */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   }
   
-  .text-foreground {
-    color: var(--foreground) !important;
+  /* Ensure all text elements use Optima */
+  p, span, div, a, button, input, textarea, select {
+    font-family: 'Optima', 'Segoe UI', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   }
-  
-  .bg-primary {
-    background-color: var(--primary) !important;
-  }
-  
-  .text-primary {
-    color: var(--primary) !important;
-  }
-  
-  .bg-secondary {
-    background-color: var(--secondary) !important;
-  }
-  
-  .text-secondary {
-    color: var(--secondary) !important;
-  }
-  
-  .bg-muted {
-    background-color: var(--muted) !important;
-  }
-  
-  .text-muted-foreground {
-    color: var(--muted-foreground) !important;
-  }
-  
-  .bg-accent {
-    background-color: var(--accent) !important;
-  }
-  
-  .text-accent {
-    color: var(--accent) !important;
-  }
-  
-  .bg-card {
-    background-color: var(--card) !important;
-  }
-  
-  .text-card-foreground {
-    color: var(--card-foreground) !important;
-  }
-  
-  .border-border {
-    border-color: var(--border) !important;
-  }
-  
-  .bg-input {
-    background-color: var(--input) !important;
-  }
-  
-  .ring-ring {
-    --tw-ring-color: var(--ring) !important;
-  }
-  
-  .bg-destructive {
-    background-color: var(--destructive) !important;
-  }
-  
-  .text-destructive {
-    color: var(--destructive) !important;
-  }
-  
-  .bg-popover {
-    background-color: var(--popover) !important;
-  }
-  
-  .text-popover-foreground {
-    color: var(--popover-foreground) !important;
-  }
-  
-  /* Focus ring styles */
-  .focus-visible\:ring-2:focus-visible {
-    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ri
+}
+
+html {
+  opacity: 0;
+}
+
+html[data-theme='dark'],
+html[data-theme='light'] {
+  opacity: initial;
+}

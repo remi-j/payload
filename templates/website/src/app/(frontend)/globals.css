@@ -11,76 +11,64 @@
   h6 {
     font-size: unset;
     font-weight: unset;
+    font-family: 'Optima', 'Segoe UI', 'Helvetica Neue', sans-serif;
   }
-
+  
+  body {
+    font-family: 'Optima', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  }
+  
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 240 5% 96%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 240 6% 80%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.2rem;
-
-    --success: 196 52% 74%;
-    --warning: 34 89% 85%;
-    --error: 10 100% 86%;
+    /* Your custom Scented Web colors */
+    --background: 250 248 246; /* #faf8f6 */
+    --foreground: 19 10 6;     /* #130a06 */
+    --card: 250 248 246;       /* Same as background */
+    --card-foreground: 19 10 6;
+    --popover: 250 248 246;
+    --popover-foreground: 19 10 6;
+    --primary: 253 63 146;     /* #fd3f92 - Your pink accent */
+    --primary-foreground: 250 248 246; /* Light text on pink */
+    --secondary: 240 240 240;  /* Light gray */
+    --secondary-foreground: 19 10 6;
+    --muted: 240 240 240;
+    --muted-foreground: 100 100 100; /* Medium gray */
+    --accent: 253 63 146;      /* #fd3f92 - Pink accent */
+    --accent-foreground: 250 248 246;
+    --destructive: 239 68 68;  /* Red for errors */
+    --destructive-foreground: 250 248 246;
+    --border: 220 220 220;     /* Light border */
+    --input: 240 240 240;      /* Input background */
+    --ring: 253 63 146;        /* Focus ring - pink */
+    --radius: 0.5rem;
+    --success: 34 197 94;      /* Green */
+    --warning: 245 158 11;     /* Orange */
+    --error: 239 68 68;        /* Red */
   }
-
+  
   [data-theme='dark'] {
-    --background: 0 0% 0%;
-    --foreground: 210 40% 98%;
-
-    --card: 0 0% 4%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 0, 0%, 15%, 0.8;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-
-    --success: 196 100% 14%;
-    --warning: 34 51% 25%;
-    --error: 10 39% 43%;
+    /* Inverted colors for dark mode */
+    --background: 19 10 6;     /* #130a06 */
+    --foreground: 250 248 246; /* #faf8f6 */
+    --card: 30 20 16;          /* Slightly lighter than background */
+    --card-foreground: 250 248 246;
+    --popover: 19 10 6;
+    --popover-foreground: 250 248 246;
+    --primary: 253 63 146;     /* Pink stays the same */
+    --primary-foreground: 19 10 6; /* Dark text on pink */
+    --secondary: 40 30 26;     /* Dark gray */
+    --secondary-foreground: 250 248 246;
+    --muted: 40 30 26;
+    --muted-foreground: 160 160 160; /* Medium gray */
+    --accent: 253 63 146;      /* Pink accent */
+    --accent-foreground: 19 10 6;
+    --destructive: 220 38 38;  /* Darker red */
+    --destructive-foreground: 250 248 246;
+    --border: 60 50 46;        /* Dark border */
+    --input: 40 30 26;         /* Input background */
+    --ring: 253 63 146;        /* Focus ring - pink */
+    --success: 22 163 74;      /* Darker green */
+    --warning: 217 119 6;      /* Darker orange */
+    --error: 220 38 38;        /* Darker red */
   }
 }
 
